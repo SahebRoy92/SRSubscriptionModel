@@ -119,8 +119,8 @@ NSString *const SRSecondSubscription = @"com.india.webguru.t4m.OneYear";
                 [_currentProduct setObject:[latestDetails objectForKey:@"expires_date_ms"] forKey:@"expiry_time"];
                 _currentIsActive = [self calculateCurrentSubscriptionActive];
                 [_currentProduct setObject:[NSNumber numberWithBool:_currentIsActive] forKey:@"active"];
-                [T4m_Storage setObject:_currentProduct forKey:kSubscriptionProduct];
-                [T4m_Storage setBool:_currentIsActive forKey:kSubscriptionActive];
+                [userDefault setObject:_currentProduct forKey:kSubscriptionProduct];
+                [userDefault setBool:_currentIsActive forKey:kSubscriptionActive];
                 NSLog(@"Product active -- %hhd",_currentIsActive);
                 
 
