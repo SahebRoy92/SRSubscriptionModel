@@ -40,11 +40,13 @@ Just call this method in AppDelegate.m `applicationDidBeginLaunchingWithOption`
  
  
  
-  *To know details of the current product use*
+ *To know details of the current product use*
+ 
  `[SRSubscriptionModel shareKit].currentProduct`
  This is a NSDictionary which will return the details of the product of the CurrentPlan.
  
  *To know in short if current plan is active or not use**
+ 
  [SRSubscriptionModel shareKit].currentIsActive
  This is a boolean value which will return if current plan is active or not (cancelled will fall under the NO category).
  
