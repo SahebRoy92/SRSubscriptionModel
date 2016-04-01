@@ -30,8 +30,8 @@ NSString *const kSubscriptionProduct = @"com.SahebRoy92.SM.existing_subscription
 
 
 
-NSString *const SRFirstSubscription = @"com.india.webguru.t4m.OneMonth";
-NSString *const SRSecondSubscription = @"com.india.webguru.t4m.OneYear";
+NSString *const SRFirstSubscription = @"com.YOUR_FIRST_SUBSCRIPTION_PLAN_PRODUCT_IDENTIFIER";
+NSString *const SRSecondSubscription = @"com.YOUR_SECOND_SUBSCRIPTION_PLAN_PRODUCT_IDENTIFIER";
 
 
 @interface SRSubscriptionModel()<SKPaymentTransactionObserver,SKProductsRequestDelegate>
