@@ -29,10 +29,16 @@ Just call this method in AppDelegate.m `applicationDidBeginLaunchingWithOption`
  **IMPORTANT** 
  Just add your View Controller to listen to these Notifications to know whether purchase is cancelled, purchase, failed or restored
 
+      
  **kSRProductPurchasedNotification**
+ 
  **kSRProductUpdatedNotification**
+ 
  **kSRProductRestoredNotification** 
+ 
  **kSRProductFailedNotification** 
+ 
+ 
  
   *To know details of the current product use*
  `[SRSubscriptionModel shareKit].currentProduct`
