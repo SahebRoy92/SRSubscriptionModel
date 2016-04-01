@@ -1,14 +1,14 @@
 # SRSubscriptionModel
 
 This is a class for performing and checking Auto Renewable subscription in iOS.
-This is inspired from MKStoreKit.
-A lot of work is still left. 
 
 
 **Step - 1**
 You got to give your subscription plan identifier's in SRSubscriptionModel.m NSString constants.
 "SRFirstSubscription" and "SRSecondSubscription".
+
 If you have more than one, then you can add them as separate constants and overwrite the `shareKit` method in the SRSubscriptionModel.m file, but that is not recommended. Just add more NSString constants and keep adding those constants in the `shareKit` method , here - 
+
 `manager.subscriptionPlans = [NSSet setWithObjects:SRFirstSubscription,SRSecondSubscription, nil]`
 
 **Step - 2**
@@ -40,15 +40,16 @@ Just call this method in AppDelegate.m `applicationDidBeginLaunchingWithOption`
  
  
  
- *To know details of the current product use*
+ **To know details of the current product use**
  
  `[SRSubscriptionModel shareKit].currentProduct`
  This is a NSDictionary which will return the details of the product of the CurrentPlan.
  
- *To know in short if current plan is active or not use**
+ **To know in short if current plan is active or not use**
  
  [SRSubscriptionModel shareKit].currentIsActive
  This is a boolean value which will return if current plan is active or not (cancelled will fall under the NO category).
  
  
  A lot of more refinement is left, will update more along the way.
+This is inspired from MKStoreKit.
