@@ -265,6 +265,8 @@ NSString *const SRSecondSubscription = @"com.YOUR_SECOND_SUBSCRIPTION_PLAN_PRODU
 
 -(void)postNotificationPurchased:(NSString *)identifier{
     NSDictionary *obj = @{@"product":identifier};
+    self.currentIsActive = YES;
+    self.currentProduct = obj;
     [[NSNotificationCenter defaultCenter]postNotificationName:kSRProductPurchasedNotification object:obj];
 }
 
