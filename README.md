@@ -4,6 +4,7 @@ This is a class for performing and checking Auto Renewable subscription in iOS.
 
 
 **Step - 1**
+
 You got to give your subscription plan identifier's in SRSubscriptionModel.m NSString constants.
 "SRFirstSubscription" and "SRSecondSubscription".
 
@@ -27,18 +28,26 @@ Just call this method in AppDelegate.m `applicationDidBeginLaunchingWithOption`
  `[SRSubscriptionModel shareKit]restoreSubscriptions]`
  
  **IMPORTANT** 
- Just add your View Controller to listen to these Notifications to know whether purchase is cancelled, purchase, failed or restored
+ Just add your View Controller to listen to these Notifications to know whether purchase is cancelled, purchase, failed, restored, products loaded, subscription checks.
 
       
- **kSRProductPurchasedNotification**
+ **kSRProductPurchasedNotification** 
+ Product Purchased
  
  **kSRProductUpdatedNotification**
+ Product Updated
  
  **kSRProductRestoredNotification** 
+ Product is restored
  
  **kSRProductFailedNotification** 
+ Failed product purchase or restoration
  
+ **kSRProductLoadedNotification**
+ Application Loaded Products from Apple servers
  
+**kSRSubscriptionResultNotification**
+ Application has loaded result of the current subscription , whether its active or not 
  
  **To know details of the current product use**
  
@@ -47,7 +56,8 @@ Just call this method in AppDelegate.m `applicationDidBeginLaunchingWithOption`
  
  **To know in short if current plan is active or not use**
  
- [SRSubscriptionModel shareKit].currentIsActive
+ `[SRSubscriptionModel shareKit].currentIsActive`
+ 
  This is a boolean value which will return if current plan is active or not (cancelled will fall under the NO category).
  
  
