@@ -27,7 +27,8 @@ NSString *const kSubscriptionProduct = @"com.SahebRoy92.SM.existing_subscription
  NSString *const kSRProductUpdatedNotification = @"com.SahebRoy92.SRSubscriptionModel.UpdatedNotification";
  NSString *const kSRProductRestoredNotification = @"com.SahebRoy92.SRSubscriptionModel.RestoredNotification";
  NSString *const kSRProductFailedNotification = @"com.SahebRoy92.SRSubscriptionModel.FailedNotification";
-
+ NSString *const kSRProductLoadedNotification = @"com.SahebRoy92.SRSubscriptionModel.LoadedNotification";
+ NSString *const kSRSubscriptionResultNotification = @"com.SahebRoy92.SRSubscriptionModel.ResultNotification";
 
 
 NSString *const SRFirstSubscription = @"com.YOUR_FIRST_SUBSCRIPTION_PLAN_PRODUCT_IDENTIFIER";
@@ -129,7 +130,7 @@ NSString *const SRSecondSubscription = @"com.YOUR_SECOND_SUBSCRIPTION_PLAN_PRODU
                 
                 // no purchase done, first time user!
             }
-            
+            [[NSNotificationCenter defaultCenter]postNotificationName:kSRSubscriptionResultNotification object:nil];
         }
         
     }] resume];
@@ -221,7 +222,7 @@ NSString *const SRSecondSubscription = @"com.YOUR_SECOND_SUBSCRIPTION_PLAN_PRODU
     
     NSLog(@"%@",response.products);
     _availableProducts = response.products;
-
+    [[NSNotificationCenter defaultCenter]postNotificationName:kSRProductLoadedNotification object:nil];
 }
 
 
