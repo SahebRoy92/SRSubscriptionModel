@@ -31,34 +31,25 @@ Just call this method in AppDelegate.m `applicationDidBeginLaunchingWithOption`
  Just add your View Controller to listen to these Notifications to know whether purchase is cancelled, purchase, failed, restored, products loaded, subscription checks.
 
       
- **kSRProductPurchasedNotification** 
- Product Purchased
+ `kSRProductPurchasedNotification`  -  Product Purchased
  
- **kSRProductUpdatedNotification**
- Product Updated
+ `kSRProductUpdatedNotification`    -  Product Updated
  
- **kSRProductRestoredNotification** 
- Product is restored
+ `kSRProductRestoredNotification`   -  Product is restored
  
- **kSRProductFailedNotification** 
- Failed product purchase or restoration
+ `kSRProductFailedNotification`     -  Failed product purchase or restoration
  
- **kSRProductLoadedNotification**
- Application Loaded Products from Apple servers
+ `kSRProductLoadedNotification`     -  Application Loaded Products from Apple servers
  
-**kSRSubscriptionResultNotification**
- Application has loaded result of the current subscription , whether its active or not 
+`kSRSubscriptionResultNotification` -  Application has loaded result of the current subscription , whether its active or not 
  
  **To know details of the current product use**
  
- `[SRSubscriptionModel shareKit].currentProduct`
- This is a NSDictionary which will return the details of the product of the CurrentPlan.
+ `[SRSubscriptionModel shareKit].currentProduct` - This is a NSDictionary which will return the details of the product of the CurrentPlan.
  
  **To know in short if current plan is active or not use**
  
- `[SRSubscriptionModel shareKit].currentIsActive`
- 
- This is a boolean value which will return if current plan is active or not (cancelled will fall under the NO category).
+ `[SRSubscriptionModel shareKit].currentIsActive` -  This is a boolean value which will return if current plan is active or not (cancelled will fall under the NO category).
  
  
  A lot of more refinement is left, will update more along the way.
