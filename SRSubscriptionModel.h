@@ -40,6 +40,8 @@ extern NSString *const kSRProductPurchasedNotification;
 extern NSString *const kSRProductUpdatedNotification;
 extern NSString *const kSRProductRestoredNotification;
 extern NSString *const kSRProductFailedNotification;
+extern NSString *const kSRProductLoadedNotification;
+extern NSString *const kSRSubscriptionResultNotification;
 
 extern NSString *const SRFirstSubscription;
 extern NSString *const SRSecondSubscription;
